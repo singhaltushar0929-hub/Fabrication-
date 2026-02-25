@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,10 @@
         .hero-bg { background: linear-gradient(135deg, #0f172a, #1e293b); }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800"><!-- Header -->
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Header -->
 <header class="hero-bg text-white p-8 text-center shadow-lg">
     <h1 class="text-4xl font-bold tracking-wide">Shri Shyam Fabrication</h1>
     <p class="mt-3 text-lg text-gray-300">Quality • Strength • Trust</p>
@@ -24,144 +28,96 @@
 <section class="py-16 px-6 text-center bg-white">
     <h2 class="text-3xl font-bold mb-6">About Us</h2>
     <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
-        Welcome to Shri Shyam Fabrication. We specialize in high-quality fenceing solutions, current fencings,railing work, and custom fencing solutions. 
-        Our focus is on strong materials, premium finishing, and timely delivery to ensure complete customer satisfaction.
+        Welcome to Shri Shyam Fabrication. We specialize in fencing solutions, railing work, gates, and custom fabrication.
+        We focus on strong materials, premium finishing, and timely delivery.
     </p>
 </section>
 
-<!-- Services Section -->
+<!-- Services -->
 <section class="py-16 px-6 bg-gray-100">
     <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
             <h3 class="font-semibold text-xl mb-3">Steel Fabrication</h3>
-            <p class="text-gray-600">Durable and heavy-duty steel structure fabrication with premium finishing.</p>
+            <p class="text-gray-600">Heavy-duty steel fabrication with premium finishing.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
             <h3 class="font-semibold text-xl mb-3">Gate & Railing Work</h3>
-            <p class="text-gray-600">Modern and strong custom-designed fencing solutions.</p>
+            <p class="text-gray-600">Modern and strong custom-designed gates & railings.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition">
-            <h3 class="font-semibold text-xl mb-3">Custom Fabrication</h3>
-            <p class="text-gray-600">Customized fabrication work as per your requirements and design.</p>
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+            <h3 class="font-semibold text-xl mb-3">Custom Work</h3>
+            <p class="text-gray-600">Customized fabrication as per your requirement.</p>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section class="py-16 px-6 text-center bg-white">
-    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <p class="text-lg font-semibold">Tushar Singhal (Proprietor)</p>
-    <p class="mt-2 text-gray-600">Phone: 9217061707</p>
-    <p class="mt-6">
-        <a href="https://wa.me/919217061707" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-2xl font-semibold shadow-lg transition">
-            Chat on WhatsApp
-        </a>
-    </p>
-</section>
-
-<!-- Footer -->
-<footer class="bg-slate-900 text-gray-300 text-center py-6">
-    <p>© 2026 Shri Shyam Fabrication. All Rights Reserved.</p>
-<!-- Gallery Section -->
+<!-- Gallery -->
 <section style="padding:60px 20px; text-align:center; background:#f3f4f6;">
     <h2 style="font-size:28px; font-weight:bold; margin-bottom:30px;">
         Our Work Gallery
     </h2>
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; max-width:1000px; margin:auto;">
-        
         <img src="IMG20260223151303.jpg" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-        
         <img src="IMG20260223151307.jpg" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-
     </div>
 </section>
 
-    <!-- Instant Estimate Calculator -->
+<!-- Estimate Calculator -->
 <section style="padding:60px 20px; background:#1f2937; text-align:center; color:white;">
-    
     <h2 style="font-size:28px; font-weight:bold; margin-bottom:20px;">
         Instant Estimate Calculator
     </h2>
 
-    <p style="font-size:16px; margin-bottom:20px;">
-        Enter Length and Width (in feet) to get instant estimate
+    <p style="margin-bottom:20px;">
+        Enter Length and Width (in feet)
     </p>
 
     <input type="number" id="length" placeholder="Length (ft)"
-style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
+        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
 
-<input type="number" id="width" placeholder="Width (ft)"
-style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
+    <input type="number" id="width" placeholder="Width (ft)"
+        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
 
     <br>
 
     <button onclick="calculateEstimate()"
-        style="padding:14px 30px; margin-top:20px; background:#f59e0b; color:black; border:none; border-radius:8px; font-size:16px; cursor:pointer;"
+        style="padding:14px 30px; margin-top:20px; background:#f59e0b; color:black; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
         Calculate Estimate
     </button>
 
-    <div id="result" style="
-    margin-top:25px;
-    font-size:26px;
-    font-weight:bold;
-    color:#ffffff;
-    background:#16a34a;
-    display:inline-block;
-    padding:12px 25px;
-    border-radius:10px;">
-</div>
-        
-    <p style="margin-top:20px; font-weight:bold; color:#b02a37; font-size:15px;">
-        ⚠️ This is only an estimate. Final pricing will be confirmed after site visit and proper measurement.
-    </p>
+    <div id="result" style="margin-top:25px;"></div>
 
+    <p style="margin-top:20px; font-weight:bold; color:#f87171;">
+        ⚠️ This is only an estimate. Final pricing will be confirmed after site visit.
+    </p>
 </section>
 
+<!-- Contact -->
+<section class="py-16 px-6 text-center bg-white">
+    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+    <p class="text-lg font-semibold">Tushar Singhal (Proprietor)</p>
+    <p class="mt-2 text-gray-600">Phone: 9217061707</p>
+</section>
 
-    
+<!-- Footer -->
+<footer class="bg-slate-900 text-gray-300 text-center py-6">
+    <p>© 2026 Shri Shyam Fabrication. All Rights Reserved.</p>
 </footer>
 
-    
-<!-- Call Floating Button -->
+<!-- Floating Buttons -->
 <a href="tel:9217061707"
-   style="position:fixed;
-          bottom:90px;
-          right:20px;
-          background-color:#007BFF;
-          color:white;
-          border-radius:50%;
-          width:60px;
-          height:60px;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          font-size:28px;
-          text-decoration:none;
-          box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+   style="position:fixed; bottom:90px; right:20px; background:#007BFF; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:28px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    📞
 </a>
-    <!-- WhatsApp Floating Button -->
+
 <a href="https://wa.me/919217061707" target="_blank"
-   style="position:fixed;
-          bottom:20px;
-          right:20px;
-          background-color:#25D366;
-          color:white;
-          border-radius:50%;
-          width:60px;
-          height:60px;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          font-size:30px;
-          text-decoration:none;
-          box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    💬
 </a>
 
-    <script>
+<script>
 function calculateEstimate() {
     var length = document.getElementById("length").value;
     var width = document.getElementById("width").value;
@@ -178,7 +134,7 @@ function calculateEstimate() {
         "<span style='color:red; font-weight:bold;'>Please enter both length and width.</span>";
     }
 }
-    </script>
+</script>
 
 </body>
 </html>
