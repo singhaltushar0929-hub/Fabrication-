@@ -1,139 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Shyam Fabrication</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .hero-bg { background: linear-gradient(135deg, #0f172a, #1e293b); }
-    </style>
+<title>Shri Shyam Fabrication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Arial, sans-serif;background:#f5f5f5;}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#000,#444);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+header h1{font-size:32px;margin:0;}
+header p{margin-top:10px;font-size:18px;color:#ccc;}
+
+/* SECTION ANIMATION */
+.section{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+padding:60px 20px;
+}
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* WHY CHOOSE US */
+.why{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.4s;
+}
+.card:hover{transform:translateY(-10px);}
+
+/* COUNTER */
+.counter-box{
+background:#111;
+color:white;
+display:flex;
+justify-content:space-around;
+text-align:center;
+padding:40px 20px;
+flex-wrap:wrap;
+}
+.counter-box div{margin:10px;}
+.counter-box div h2{
+color:#FFD700;
+font-size:32px;
+margin:0;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+.gallery img,.gallery video{
+width:100%;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.4s;
+cursor:pointer;
+}
+.gallery img:hover{transform:scale(1.05);}
+
+/* ESTIMATE */
+.estimate{
+background:#1a1a1a;
+color:white;
+text-align:center;
+}
+.estimate input{
+padding:12px;
+margin:10px;
+width:200px;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+border:none;
+text-align:center;
+}
+.estimate button{
+padding:12px 30px;
+font-size:18px;
+background:#FFD700;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+.estimate button:hover{background:#ffcc00;}
+#result{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+color:#00ff90;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+.testimonial div{
+background:white;
+padding:25px;
+margin:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp,.call{
+position:fixed;
+right:20px;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.whatsapp{bottom:90px;background:#25D366;}
+.call{bottom:30px;background:#007bff;}
+
+@media(max-width:600px){
+header h1{font-size:24px;}
+}
+</style>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-<!-- Header -->
-<header class="hero-bg text-white p-8 text-center shadow-lg">
-    <h1 class="text-4xl font-bold tracking-wide">Shri Shyam Fabrication</h1>
-    <p class="mt-3 text-lg text-gray-300">Quality • Strength • Trust</p>
-    <div class="mt-6 flex justify-center gap-4 flex-wrap">
-        <a href="tel:9217061707" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-2xl font-semibold shadow-lg transition">Call Now</a>
-        <a href="https://wa.me/919217061707" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg transition">WhatsApp Us</a>
-    </div>
+<header>
+<h1>Shri Shyam Fabrication</h1>
+<p>Strong • Durable • Professional Fencing & Gate Work</p>
 </header>
 
-<!-- About Section -->
-<section class="py-16 px-6 text-center bg-white">
-    <h2 class="text-3xl font-bold mb-6">About Us</h2>
-    <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
-        Welcome to Shri Shyam Fabrication. We specialize in fencing solutions, railing work, gates, and custom fabrication.
-        We focus on strong materials, premium finishing, and timely delivery.
-    </p>
+<!-- WHY CHOOSE US -->
+<section class="section">
+<h2 style="text-align:center;">Why Choose Us?</h2>
+<div class="why">
+<div class="card">
+<h3>Premium Quality</h3>
+<p>Strong and durable material with best finishing.</p>
+</div>
+<div class="card">
+<h3>Affordable Price</h3>
+<p>Best market rates with honest pricing.</p>
+</div>
+<div class="card">
+<h3>On Time Work</h3>
+<p>Fast and timely project completion.</p>
+</div>
+</div>
 </section>
 
-<!-- Services -->
-<section class="py-16 px-6 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 class="font-semibold text-xl mb-3">Steel Fabrication</h3>
-            <p class="text-gray-600">Heavy-duty steel fabrication with premium finishing.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 class="font-semibold text-xl mb-3">Gate & Railing Work</h3>
-            <p class="text-gray-600">Modern and strong custom-designed gates & railings.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 class="font-semibold text-xl mb-3">Custom Work</h3>
-            <p class="text-gray-600">Customized fabrication as per your requirement.</p>
-        </div>
-    </div>
+<!-- COUNTER -->
+<div class="counter-box">
+<div>
+<h2 class="count" data-target="150">0</h2>
+<p>Projects</p>
+</div>
+<div>
+<h2 class="count" data-target="120">0</h2>
+<p>Happy Clients</p>
+</div>
+<div>
+<h2 class="count" data-target="5">0</h2>
+<p>Years Experience</p>
+</div>
+</div>
+
+<!-- GALLERY -->
+<section class="section">
+<h2 style="text-align:center;">Our Work Gallery</h2>
+<div class="gallery">
+
+<img src="IMG-20260212-WA0007.jpg">
+<img src="IMG-20260212-WA0010.jpg">
+<img src="IMG-20260212-WA0012.jpg">
+<img src="IMG20260223151303.jpg">
+<img src="IMG20260223151307.jpg">
+
+<video controls>
+<source src="VID20260223151241%20(1).mp4" type="video/mp4">
+</video>
+
+<img src="IMG-20260224-WA0000.jpg">
+
+</div>
 </section>
 
-<!-- Gallery -->
-<section style="padding:60px 20px; text-align:center; background:#f3f4f6;">
-    <h2 style="font-size:28px; font-weight:bold; margin-bottom:30px;">
-        Our Work Gallery
-    </h2>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; max-width:1000px; margin:auto;">
-        <img src="IMG20260223151303.jpg" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-        <img src="IMG20260223151307.jpg" style="width:100%; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-    </div>
+<!-- ESTIMATE -->
+<section class="section estimate">
+<h2>Instant Estimate Calculator</h2>
+<input type="number" id="length" placeholder="Enter Length">
+<input type="number" id="width" placeholder="Enter Width"><br>
+<button onclick="calculate()">Calculate Estimate</button>
+<div id="result"></div>
+<p style="margin-top:15px;font-size:14px;color:#ccc;">
+*This is an estimate only. Final price after site visit.
+</p>
 </section>
 
-<!-- Estimate Calculator -->
-<section style="padding:60px 20px; background:#1f2937; text-align:center; color:white;">
-    <h2 style="font-size:28px; font-weight:bold; margin-bottom:20px;">
-        Instant Estimate Calculator
-    </h2>
-
-    <p style="margin-bottom:20px;">
-        Enter Length and Width (in feet)
-    </p>
-
-    <input type="number" id="length" placeholder="Length (ft)"
-        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
-
-    <input type="number" id="width" placeholder="Width (ft)"
-        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px solid #f59e0b; font-size:18px; font-weight:bold; text-align:center; color:black;">
-
-    <br>
-
-    <button onclick="calculateEstimate()"
-        style="padding:14px 30px; margin-top:20px; background:#f59e0b; color:black; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
-        Calculate Estimate
-    </button>
-
-    <div id="result" style="margin-top:25px;"></div>
-
-    <p style="margin-top:20px; font-weight:bold; color:#f87171;">
-        ⚠️ This is only an estimate. Final pricing will be confirmed after site visit.
-    </p>
+<!-- TESTIMONIAL -->
+<section class="section">
+<h2 style="text-align:center;">Customer Reviews</h2>
+<div class="testimonial">
+<div>
+⭐⭐⭐⭐⭐ <br>
+"Best fencing work in our area. Strong material and perfect finishing."
+</div>
+<div>
+⭐⭐⭐⭐⭐ <br>
+"Affordable price and very professional service."
+</div>
+</div>
 </section>
 
-<!-- Contact -->
-<section class="py-16 px-6 text-center bg-white">
-    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <p class="text-lg font-semibold">Tushar Singhal (Proprietor)</p>
-    <p class="mt-2 text-gray-600">Phone: 9217061707</p>
-</section>
-
-<!-- Footer -->
-<footer class="bg-slate-900 text-gray-300 text-center py-6">
-    <p>© 2026 Shri Shyam Fabrication. All Rights Reserved.</p>
+<footer>
+© 2026 Shri Shyam Fabrication | All Rights Reserved
 </footer>
 
-<!-- Floating Buttons -->
-<a href="tel:9217061707"
-   style="position:fixed; bottom:90px; right:20px; background:#007BFF; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:28px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-   📞
-</a>
-
-<a href="https://wa.me/919217061707" target="_blank"
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-   💬
-</a>
+<a href="https://wa.me/919217061707" class="whatsapp">WhatsApp</a>
+<a href="tel:9217061707" class="call">Call Now</a>
 
 <script>
-function calculateEstimate() {
-    var length = document.getElementById("length").value;
-    var width = document.getElementById("width").value;
 
-    if(length && width){
-        var total = (Number(length) + Number(width)) * 220;
-
-        document.getElementById("result").innerHTML =
-        "<div style='background:#16a34a; color:white; padding:12px 25px; border-radius:10px; display:inline-block; font-size:26px; font-weight:bold;'>Estimated Cost: ₹ " 
-        + total.toLocaleString() + "</div>";
-    } 
-    else {
-        document.getElementById("result").innerHTML =
-        "<span style='color:red; font-weight:bold;'>Please enter both length and width.</span>";
-    }
+/* SCROLL ANIMATION */
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.classList.add('show');
 }
+});
+});
+
+/* COUNTER */
+const counters=document.querySelectorAll('.count');
+counters.forEach(counter=>{
+counter.innerText='0';
+const update=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const inc=target/100;
+if(c<target){
+counter.innerText=Math.ceil(c+inc);
+setTimeout(update,20);
+}else{counter.innerText=target;}
+}
+update();
+});
+
+/* CALCULATOR */
+function calculate(){
+let length=document.getElementById("length").value;
+let width=document.getElementById("width").value;
+if(length==""||width==""){
+document.getElementById("result").innerHTML="Please enter both values";
+return;
+}
+let total=(parseFloat(length)+parseFloat(width))*220;
+document.getElementById("result").innerHTML="Estimated Cost: ₹ "+total.toFixed(2);
+}
+
 </script>
 
 </body>
