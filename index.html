@@ -119,24 +119,7 @@ style="padding:12px; margin:10px; width:160px; border-radius:8px; border:2px sol
 
 </section>
 
-<script>
-function calculateEstimate() {
-    var length = document.getElementById("length").value;
-    var width = document.getElementById("width").value;
 
-    if(length && width){
-        var total = (Number(length) + Number(width)) * 220;
-
-        document.getElementById("result").innerHTML =
-        "<div style='background:#16a34a; color:white; padding:12px 25px; border-radius:10px; display:inline-block; font-size:26px; font-weight:bold;'>Estimated Cost: ₹ " 
-        + total.toLocaleString() + "</div>";
-    } 
-    else {
-        document.getElementById("result").innerHTML =
-        "<span style='color:red; font-weight:bold;'>Please enter both length and width.</span>";
-    }
-}
-</script>
     
 </footer>
 
@@ -177,6 +160,25 @@ function calculateEstimate() {
           box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    💬
 </a>
+
+    <script>
+function calculateEstimate() {
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
+
+    if(length && width){
+        var total = (Number(length) + Number(width)) * 220;
+
+        document.getElementById("result").innerHTML =
+        "<div style='background:#16a34a; color:white; padding:12px 25px; border-radius:10px; display:inline-block; font-size:26px; font-weight:bold;'>Estimated Cost: ₹ " 
+        + total.toLocaleString() + "</div>";
+    } 
+    else {
+        document.getElementById("result").innerHTML =
+        "<span style='color:red; font-weight:bold;'>Please enter both length and width.</span>";
+    }
+}
+    </script>
 
 </body>
 </html>
