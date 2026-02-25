@@ -126,11 +126,14 @@ function calculateEstimate() {
 
     if(length && width){
         var total = (Number(length) + Number(width)) * 220;
+
         document.getElementById("result").innerHTML =
-            "Estimated Cost: ₹ " + total.toLocaleString();
-    } else {
+        "<div style='background:#16a34a; color:white; padding:12px 25px; border-radius:10px; display:inline-block; font-size:26px; font-weight:bold;'>Estimated Cost: ₹ " 
+        + total.toLocaleString() + "</div>";
+    } 
+    else {
         document.getElementById("result").innerHTML =
-            "Please enter both length and width.";
+        "<span style='color:red; font-weight:bold;'>Please enter both length and width.</span>";
     }
 }
 </script>
