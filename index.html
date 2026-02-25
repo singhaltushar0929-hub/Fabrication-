@@ -77,6 +77,54 @@
 
     </div>
 </section>
+
+    <!-- Instant Estimate Calculator -->
+<section style="padding:60px 20px; background:#e9f7ef; text-align:center;">
+    
+    <h2 style="font-size:28px; font-weight:bold; margin-bottom:20px;">
+        Instant Estimate Calculator
+    </h2>
+
+    <p style="font-size:16px; margin-bottom:20px;">
+        Enter Length and Width (in feet) to get instant estimate
+    </p>
+
+    <input type="number" id="length" placeholder="Length (ft)"
+        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+
+    <input type="number" id="width" placeholder="Width (ft)"
+        style="padding:12px; margin:10px; width:160px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+
+    <br>
+
+    <button onclick="calculateEstimate()"
+        style="padding:14px 30px; margin-top:20px; background:#198754; color:white; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+        Calculate Estimate
+    </button>
+
+    <h3 id="result" style="margin-top:25px; font-size:22px; font-weight:bold;"></h3>
+
+    <p style="margin-top:20px; font-weight:bold; color:#b02a37; font-size:15px;">
+        ⚠️ This is only an estimate. Final pricing will be confirmed after site visit and proper measurement.
+    </p>
+
+</section>
+
+<script>
+function calculateEstimate() {
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
+
+    if(length && width){
+        var total = (Number(length) + Number(width)) * 220;
+        document.getElementById("result").innerHTML =
+            "Estimated Cost: ₹ " + total.toLocaleString();
+    } else {
+        document.getElementById("result").innerHTML =
+            "Please enter both length and width.";
+    }
+}
+</script>
     
 </footer>
 
